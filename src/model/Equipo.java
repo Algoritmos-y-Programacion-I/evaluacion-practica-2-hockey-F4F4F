@@ -1,17 +1,26 @@
 package model;
 
 public class Equipo {
+    private String nombre;
+    private JugadorHockey[] jugadores;
 
-    private final int CANTIDAD_JUGADORES = 6;
+    public Equipo(String nombre) {
+        this.nombre = nombre;
+        this.jugadores = new JugadorHockey[6];
+    }
 
-    protected String nombreEquipo;
+    public String getNombre() {
+        return nombre;
+    }
 
-    private JugadorHockey[] jugadores = new JugadorHockey[CANTIDAD_JUGADORES];
-
-    public void agregarJugador(JugadorHockey jugador, int posicion) {
-        if (posicion >= 0 && posicion < jugadores.length) {
-            jugadores[posicion] = jugador;
+    public void agregarJugador(JugadorHockey jugador) {
+        for (int i = 0; i < jugadores.length; i++) {
+            if (jugadores[i] == null) {
+                jugadores[i] = jugador;
+                return;
+            }
         }
+        System.out.println("No se pueden agregar más jugadores a este equipo.");
     }
 
     public JugadorHockey[] getJugadores() {

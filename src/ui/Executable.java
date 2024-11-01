@@ -6,7 +6,7 @@ import model.Controller;
 public class Executable {
 
     private Scanner escaner;
-    private Controller controladora;
+    private Controller cont;
     private static boolean flag;
 
     /**
@@ -19,7 +19,7 @@ public class Executable {
      */
     public Executable() {
         escaner = new Scanner(System.in);
-        controladora = new Controller();
+        cont = new Controller();
     }
 
     /**
@@ -46,17 +46,18 @@ public class Executable {
 			escaner.nextLine();
 
 			switch (option) {
-					case 1:
-
+					case 1:cont.fixture();
+                    System.out.println("Se ha creado el fixture");
 						break;
-					case 2:
-
+					case 2: cont.testObjects();
+                    System.out.println("Añadidos con exito");
 						break;
-					case 3:
+					case 3: cont.ejecutarSimulacion();
 
 						break;
 					case 4:
 						flag = true;
+                        System.out.println("chao");
 						System.exit(0);
 						break;
 					default:

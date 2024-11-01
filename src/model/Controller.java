@@ -56,7 +56,7 @@ public class Controller {
         Equipo equipo1 = equipos[0]; 
         Equipo equipo2 = equipos[1]; 
     
-        System.out.println("Simulando partido");
+        System.out.println("Simulando partido entre" + equipo1 + " vs" + equipo2  );
     
         simularAtaque(equipo1);
         simularAtaque(equipo2);

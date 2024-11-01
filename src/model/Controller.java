@@ -72,9 +72,9 @@ public class Controller {
             JugadorHockey jugadorActual = equipo.getJugadores()[numeroDePases % equipo.getJugadores().length];
             
             if (ultimoPasador != null) {
-                System.out.println("Jugador " + ultimoPasador.getNombre() + " se la pasa a Jugador " + jugadorActual.getNombre());
+                System.out.println( ultimoPasador.getNombre() + " se la pasa a  " + jugadorActual.getNombre());
             } else {
-                System.out.println("Jugador " + jugadorActual.getNombre() + " inicia el ataque.");
+                System.out.println( jugadorActual.getNombre() + " inicia el ataque.");
             }
             
             desplazarArbitros(numeroDePases); 
@@ -83,7 +83,7 @@ public class Controller {
             numeroDePases++; 
         }
     
-        System.out.println("Jugador " + ultimoPasador.getNombre() + " entra el disco en la red. ¡Gol!");
+        System.out.println( ultimoPasador.getNombre() + " entra el disco en la red. ¡Gol!");
     }
     
     private void desplazarArbitros(int numeroDePases) {
